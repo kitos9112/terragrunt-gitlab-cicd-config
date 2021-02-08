@@ -38,7 +38,7 @@ require (
 	github.com/urfave/cli v1.22.4 // indirect
 	github.com/zclconf/go-cty v1.5.1
 	github.com/zclconf/go-cty-yaml v1.0.2 // indirect
-	golang.org/x/sync v0.0.0-20200625203802-6e8e738ad208
+	golang.org/x/sync v0.0.0-20201207232520-09787c993a3a
 	gopkg.in/ini.v1 v1.57.0 // indirect
 	gopkg.in/yaml.v2 v2.3.0 // indirect
 	gopkg.in/yaml.v3 v3.0.0-20200615113413-eeeca48fe776 // indirect
