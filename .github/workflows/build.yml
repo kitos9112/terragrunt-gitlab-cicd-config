@@ -1,0 +1,32 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    container:
+      image: golang:1.15.6-alpine
+    steps:
+      - name: Install pre-requisites (1)
+        run: |
+          apk add --no-cache make jq zip curl git npm gettext
+      - name: Install pre-requisites (2)
+        run: |
+          go get github.com/github/hub
+      - name: Checkout
+        uses: actions/checkout@master
+      - run: git config user.name "GitHub Actions" && git config user.email "actions@users.noreply.github.com"
+      - name: Build
+        run: make binaries
+      - name: Release
+        if: ${{ github.event_name != 'pull_request' }}
+        run: |
+          npm version patch
+          make release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN  }}
