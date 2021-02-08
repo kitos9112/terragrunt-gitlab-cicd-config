@@ -36,7 +36,7 @@ require (
 	github.com/stretchr/testify v1.6.1 // indirect
 	github.com/ulikunitz/xz v0.5.7 // indirect
 	github.com/urfave/cli v1.22.4 // indirect
-	github.com/zclconf/go-cty v1.5.1
+	github.com/zclconf/go-cty v1.7.1
 	github.com/zclconf/go-cty-yaml v1.0.2 // indirect
 	golang.org/x/sync v0.0.0-20200625203802-6e8e738ad208
 	gopkg.in/ini.v1 v1.57.0 // indirect

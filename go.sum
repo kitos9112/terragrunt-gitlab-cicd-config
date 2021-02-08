@@ -776,6 +776,8 @@ github.com/urfave/cli v1.22.4/go.mod h1:Gos4lmkARVdJ6EkW0WaNv/tZAAMe9V7XWyB60NtX
 github.com/vdemeester/k8s-pkg-credentialprovider v0.0.0-20200107171650-7c61ffa44238/go.mod h1:JwQJCMWpUDqjZrB5jpw0f5VbN7U95zxFy1ZDpoEarGo=
 github.com/vmihailenco/msgpack v3.3.3+incompatible/go.mod h1:fy3FlTQTDXWkZ7Bh6AcGMlsjHatGryHQYUTf1ShIgkk=
 github.com/vmihailenco/msgpack v4.0.1+incompatible/go.mod h1:fy3FlTQTDXWkZ7Bh6AcGMlsjHatGryHQYUTf1ShIgkk=
+github.com/vmihailenco/msgpack/v4 v4.3.12/go.mod h1:gborTTJjAo/GWTqqRjrLCn9pgNN+NXzzngzBKDPIqw4=
+github.com/vmihailenco/tagparser v0.1.1/go.mod h1:OeAg3pn3UbLjkWt+rN9oFYB6u/cQgqMEUPoW2WPyhdI=
 github.com/vmware/govmomi v0.20.3/go.mod h1:URlwyTFZX72RmxtxuaFL2Uj3fD1JTvZdx59bHWk6aFU=
 github.com/xanzy/ssh-agent v0.2.1/go.mod h1:mLlQY/MoOhWBj+gOGMQkOeiEvkx+8pJSI+0Bx9h2kr4=
 github.com/xiang90/probing v0.0.0-20160813154853-07dd2e8dfe18/go.mod h1:UETIi67q53MR2AWcXfiuqkDkRtnGDLqkBTpCHuJHxtU=
@@ -794,6 +796,8 @@ github.com/zclconf/go-cty v1.3.1 h1:QIOZl+CKKdkv4l2w3lG23nNzXgLoxsWLSEdg1MlX4p0=
 github.com/zclconf/go-cty v1.3.1/go.mod h1:YO23e2L18AG+ZYQfSobnY4G65nvwvprPCxBHkufUH1k=
 github.com/zclconf/go-cty v1.5.1 h1:oALUZX+aJeEBUe2a1+uD2+UTaYfEjnKFDEMRydkGvWE=
 github.com/zclconf/go-cty v1.5.1/go.mod h1:nHzOclRkoj++EU9ZjSrZvRG0BXIWt8c7loYc0qXAFGQ=
+github.com/zclconf/go-cty v1.7.1 h1:AvsC01GMhMLFL8CgEYdHGM+yLnnDOwhPAYcgTkeF0Gw=
+github.com/zclconf/go-cty v1.7.1/go.mod h1:VDR4+I79ubFBGm1uJac1226K5yANQFHeauxPBoP54+o=
 github.com/zclconf/go-cty-yaml v1.0.1 h1:up11wlgAaDvlAGENcFDnZgkn0qUJurso7k6EpURKNF8=
 github.com/zclconf/go-cty-yaml v1.0.1/go.mod h1:IP3Ylp0wQpYm50IHK8OZWKMu6sPJIUgKa8XhiVHura0=
 github.com/zclconf/go-cty-yaml v1.0.2 h1:dNyg4QLTrv2IfJpm7Wtxi55ed5gLGOlPrZ6kMd51hY0=
