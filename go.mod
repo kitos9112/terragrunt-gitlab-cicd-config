@@ -7,7 +7,6 @@ require (
 	github.com/Masterminds/goutils v1.1.1 // indirect
 	github.com/Masterminds/semver v1.5.0 // indirect
 	github.com/Masterminds/sprig/v3 v3.2.2
-	github.com/Masterminds/sprig/v3 v3.2.2
 	github.com/agext/levenshtein v1.2.3 // indirect
 	github.com/aws/aws-sdk-go v1.33.2 // indirect
 	github.com/bmatcuk/doublestar v1.3.1 // indirect
@@ -15,7 +14,7 @@ require (
 	github.com/debber/debber-v0.3 v0.0.0-20201001103732-e53137b65bb8 // indirect
 	github.com/ghodss/yaml v1.0.0
 	github.com/go-errors/errors v1.1.1 // indirect
-	github.com/gruntwork-io/terragrunt v0.28.2
+	github.com/gruntwork-io/terragrunt v0.28.7
 	github.com/hashicorp/go-multierror v1.1.0 // indirect
 	github.com/hashicorp/go-uuid v1.0.2 // indirect
 	github.com/hashicorp/go-version v1.2.1 // indirect
