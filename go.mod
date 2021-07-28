@@ -27,12 +27,10 @@ require (
 	github.com/mattn/go-zglob v0.0.2 // indirect
 	github.com/mitchellh/go-testing-interface v1.14.1 // indirect
 	github.com/sirupsen/logrus v1.8.1
-	github.com/spf13/cobra v1.1.3
-	github.com/stretchr/testify v1.6.1 // indirect
+	github.com/spf13/cobra v1.2.1
 	github.com/ulikunitz/xz v0.5.7 // indirect
 	github.com/urfave/cli v1.22.4 // indirect
 	github.com/zclconf/go-cty v1.8.1
 	github.com/zclconf/go-cty-yaml v1.0.2 // indirect
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
-	gopkg.in/ini.v1 v1.57.0 // indirect
 )
