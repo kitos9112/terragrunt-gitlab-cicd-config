@@ -1,6 +1,6 @@
 package main
 
-import "gitlabce.tools.ci.vodafone.com/ucc-devops/aws-infrastructure/terragrunt-gitlab-cicd-config/cmd"
+import "github.com/kitos9112/terragrunt-gitlab-cicd-config/cmd"
 
 // This variable is set at build time using -ldflags parameters.
 // But we still set a default here for those using plain `go get` downloads
