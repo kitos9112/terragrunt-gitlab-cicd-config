@@ -46,14 +46,14 @@ Or [download the binary](https://github.com/kitos9112/terragrunt-gitlab-cicd-con
 
 ```bash
 # Linux
-curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/1.0.2/terragrunt-gitlab-cicd-config_1.0.2_linux_x86_64.tar.gz | tar xz
+curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/1.1.1/terragrunt-gitlab-cicd-config_1.1.1_linux_x86_64.tar.gz | tar xz
 
 # OS X
-curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/1.0.2/terragrunt-gitlab-cicd-config_1.0.2_osx_x86_64.tar.gz | tar xz
+curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/1.1.1/terragrunt-gitlab-cicd-config_1.1.1_osx_x86_64.tar.gz | tar xz
 
 # Windows
-curl -LO https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/1.0.2/terragrunt-gitlab-cicd-config_1.0.2_windows_x86_64.zip
-unzip terragrunt-gitlab-cicd-config_1.0.2_windows_x86_64.zip
+curl -LO https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/1.1.1/terragrunt-gitlab-cicd-config_1.1.1_windows_x86_64.zip
+unzip terragrunt-gitlab-cicd-config_1.1.1_windows_x86_64.zip
 ```
 
 ## Use it
@@ -62,7 +62,22 @@ unzip terragrunt-gitlab-cicd-config_1.0.2_windows_x86_64.zip
 
 terragrunt-gitlab-cicd-config [OPTIONS] [COMMAND [ARGS...]]
 
-/bin/sh: terragrunt-gitlab-cicd-config: not found
+Generates Atlantis Config for Terragrunt projects
+
+Usage:
+  terragrunt-atlantis-config [command]
+
+Available Commands:
+  completion  generate the autocompletion script for the specified shell
+  generate    Creates GitLab CICD Dynamic configuration
+  help        Help about any command
+  version     Version of terragrunt-atlantis-config
+
+Flags:
+  -h, --help               help for terragrunt-atlantis-config
+  -v, --verbosity string   Log level (debug, info, warn, error, fatal, panic (default "info")
+
+Use "terragrunt-atlantis-config [command] --help" for more information about a command.
 ```
 
 ### Examples
