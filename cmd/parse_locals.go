@@ -43,6 +43,18 @@ func parseHcl(parser *hclparse.Parser, hcl string, filename string) (file *hcl.F
 	return file, nil
 }
 
+// Merges in values from a child into a parent set of `local` values
+func mergeResolvedLocals(parent ResolvedLocals, child ResolvedLocals) ResolvedLocals {
+
+	if child.Skip != nil {
+		parent.Skip = child.Skip
+	}
+
+	parent.ExtraAtlantisDependencies = append(parent.ExtraAtlantisDependencies, child.ExtraAtlantisDependencies...)
+
+	return parent
+}
+
 // Parses a given file, returning a map of all it's `local` values
 func parseLocals(path string, terragruntOptions *options.TerragruntOptions, includeFromChild *config.IncludeConfig) (ResolvedLocals, error) {
 	configString, err := util.ReadFileAsString(path)
@@ -58,31 +70,23 @@ func parseLocals(path string, terragruntOptions *options.TerragruntOptions, incl
 	}
 
 	// Decode just the Base blocks. See the function docs for DecodeBaseBlocks for more info on what base blocks are.
-	localsAsCty, _, includeConfig, err := config.DecodeBaseBlocks(terragruntOptions, parser, file, path, includeFromChild)
+	decodeSectionTypes := []config.PartialDecodeSectionType{}
+	localsAsCty, trackInclude, err := config.DecodeBaseBlocks(terragruntOptions, parser, file, path, includeFromChild, decodeSectionTypes)
 	if err != nil {
 		return ResolvedLocals{}, err
 	}
 
 	// Recurse on the parent to merge in the locals from that file
-	parentLocals := ResolvedLocals{}
-	if includeConfig != nil && includeFromChild == nil {
-		// Ignore errors if the parent cannot be parsed. Terragrunt Errors still will be logged
-		parentLocals, _ = parseLocals(includeConfig.Path, terragruntOptions, includeConfig)
+	mergedParentLocals := ResolvedLocals{}
+	if trackInclude != nil && includeFromChild == nil {
+		for _, includeConfig := range trackInclude.CurrentList {
+			parentLocals, _ := parseLocals(includeConfig.Path, terragruntOptions, &includeConfig)
+			mergedParentLocals = mergeResolvedLocals(mergedParentLocals, parentLocals)
+		}
 	}
 	childLocals := resolveLocals(*localsAsCty)
 
-	if childLocals.Skip != nil {
-		parentLocals.Skip = childLocals.Skip
-	}
-
-	for _, dep := range childLocals.ExtraAtlantisDependencies {
-		parentLocals.ExtraAtlantisDependencies = append(
-			parentLocals.ExtraAtlantisDependencies,
-			dep,
-		)
-	}
-
-	return parentLocals, nil
+	return mergeResolvedLocals(mergedParentLocals, childLocals), nil
 }
 
 func resolveLocals(localsAsCty cty.Value) ResolvedLocals {
