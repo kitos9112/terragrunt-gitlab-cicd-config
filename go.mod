@@ -6,7 +6,7 @@ require (
 	github.com/Masterminds/sprig/v3 v3.2.2
 	github.com/bmatcuk/doublestar v1.3.1 // indirect
 	github.com/go-errors/errors v1.1.1 // indirect
-	github.com/gruntwork-io/terragrunt v0.35.10
+	github.com/gruntwork-io/terragrunt v0.35.13
 	github.com/hashicorp/hcl/v2 v2.10.1
 	github.com/howeyc/gopass v0.0.0-20190910152052-7cb4b85ec19c // indirect
 	github.com/mattn/go-zglob v0.0.2 // indirect
