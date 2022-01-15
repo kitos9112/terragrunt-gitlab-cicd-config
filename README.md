@@ -46,14 +46,14 @@ Or [download the binary](https://github.com/kitos9112/terragrunt-gitlab-cicd-con
 
 ```bash
 # Linux
-curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/1.1.13/terragrunt-gitlab-cicd-config_1.1.13_linux_x86_64.tar.gz | tar xz
+curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/1.1.14/terragrunt-gitlab-cicd-config_1.1.14_linux_x86_64.tar.gz | tar xz
 
 # OS X
-curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/1.1.13/terragrunt-gitlab-cicd-config_1.1.13_osx_x86_64.tar.gz | tar xz
+curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/1.1.14/terragrunt-gitlab-cicd-config_1.1.14_osx_x86_64.tar.gz | tar xz
 
 # Windows
-curl -LO https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/1.1.13/terragrunt-gitlab-cicd-config_1.1.13_windows_x86_64.zip
-unzip terragrunt-gitlab-cicd-config_1.1.13_windows_x86_64.zip
+curl -LO https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/1.1.14/terragrunt-gitlab-cicd-config_1.1.14_windows_x86_64.zip
+unzip terragrunt-gitlab-cicd-config_1.1.14_windows_x86_64.zip
 ```
 
 ## Use it
@@ -68,7 +68,7 @@ Usage:
   terragrunt-atlantis-config [command]
 
 Available Commands:
-  completion  generate the autocompletion script for the specified shell
+  completion  Generate the autocompletion script for the specified shell
   generate    Creates GitLab CICD Dynamic configuration
   help        Help about any command
   version     Version of terragrunt-atlantis-config
