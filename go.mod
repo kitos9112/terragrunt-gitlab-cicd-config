@@ -11,7 +11,7 @@ require (
 	github.com/howeyc/gopass v0.0.0-20190910152052-7cb4b85ec19c // indirect
 	github.com/mattn/go-zglob v0.0.2 // indirect
 	github.com/sirupsen/logrus v1.8.1
-	github.com/spf13/cobra v1.2.1
+	github.com/spf13/cobra v1.3.0
 	github.com/urfave/cli v1.22.4 // indirect
 	github.com/zclconf/go-cty v1.10.0
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
