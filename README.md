@@ -46,14 +46,14 @@ Or [download the binary](https://github.com/kitos9112/terragrunt-gitlab-cicd-con
 
 ```bash
 # Linux
-curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/1.1.18/terragrunt-gitlab-cicd-config_1.1.18_linux_x86_64.tar.gz | tar xz
+curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/1.1.19/terragrunt-gitlab-cicd-config_1.1.19_linux_x86_64.tar.gz | tar xz
 
 # OS X
-curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/1.1.18/terragrunt-gitlab-cicd-config_1.1.18_osx_x86_64.tar.gz | tar xz
+curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/1.1.19/terragrunt-gitlab-cicd-config_1.1.19_osx_x86_64.tar.gz | tar xz
 
 # Windows
-curl -LO https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/1.1.18/terragrunt-gitlab-cicd-config_1.1.18_windows_x86_64.zip
-unzip terragrunt-gitlab-cicd-config_1.1.18_windows_x86_64.zip
+curl -LO https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/1.1.19/terragrunt-gitlab-cicd-config_1.1.19_windows_x86_64.zip
+unzip terragrunt-gitlab-cicd-config_1.1.19_windows_x86_64.zip
 ```
 
 ## Use it
