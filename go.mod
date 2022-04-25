@@ -7,7 +7,7 @@ require (
 	github.com/bmatcuk/doublestar v1.3.1 // indirect
 	github.com/go-errors/errors v1.1.1 // indirect
 	github.com/gruntwork-io/terragrunt v0.36.7
-	github.com/hashicorp/hcl/v2 v2.11.1
+	github.com/hashicorp/hcl/v2 v2.12.0
 	github.com/howeyc/gopass v0.0.0-20190910152052-7cb4b85ec19c // indirect
 	github.com/mattn/go-zglob v0.0.2 // indirect
 	github.com/sirupsen/logrus v1.8.1
