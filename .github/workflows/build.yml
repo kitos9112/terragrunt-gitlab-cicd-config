@@ -8,9 +8,9 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     container:
-      image: golang:1.18.1-alpine
+      image: golang:1.18-alpine
     steps:
       - name: Install pre-requisites (1)
         run: |
