@@ -18,7 +18,7 @@ jobs:
 
       - name: Install pre-requisites (2)
         run: |
-          go get github.com/github/hub
+          go install github.com/github/hub@latest
 
       - name: Checkout
         uses: actions/checkout@master
