@@ -8,7 +8,7 @@ require (
 	github.com/hashicorp/hcl/v2 v2.13.0
 	github.com/sirupsen/logrus v1.9.0
 	github.com/spf13/cobra v1.5.0
-	github.com/zclconf/go-cty v1.10.0
+	github.com/zclconf/go-cty v1.11.0
 	golang.org/x/sync v0.0.0-20220722155255-886fb9371eb4
 )
 
