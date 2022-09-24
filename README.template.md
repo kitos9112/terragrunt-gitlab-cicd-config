@@ -1,29 +1,27 @@
 # ${APP}
 
-Heavily inspired on [Terragrunt Atlantis Configuration](https://github.com/transcend-io/terragrunt-atlantis-config) - This will read a Terragrunt-like directory layout and will parse an input template which should be a valid `.gitlab-ci.yml` file.
+Heavily inspired on [Terragrunt Atlantis Configuration](https://github.com/transcend-io/terragrunt-atlantis-config) - This will read a [Terragrunt-like directory layout](https://github.com/gruntwork-io/terragrunt-infrastructure-live-example), interpret all `local` Terragrunt config blocks while parsing an input TXT Golang template mimicking a `.gitlab-ci.yml` file.
 
-This is very work in progress
+> The actual input file should be a valid `.gitlab-ci.yml` file with Golang. An example can be found [here](test/inputs/.gitlab-ci.yml.tpl)
 
 ```bash
-> terragrunt-gitlab-cicd-config generate --help
-Created GitLab CICD Dynamic configuration to be run as part of an external trigger. Use carefully
+> terragrunt-gitlab-cicd-config --help
+By taking a Golang TXT template file, it generates GitlabCI Config for Terragrunt IaC live style projects maintained in a mono-repo fashion.
 
 Usage:
-  terragrunt-atlantis-config generate [flags]
+  terragrunt-gitlab-cicd-config [command]
+
+Available Commands:
+  completion  Generate the autocompletion script for the specified shell
+  generate    Creates GitLab CICD Dynamic configuration
+  help        Help about any command
+  version     Version of terragrunt-gitlab-cicd-config
 
 Flags:
-      --apply-requirements atlantis apply     Requirements that must be satisfied before atlantis apply can be run. Currently the only supported requirements are `approved` and `mergeable`. Can be overridden by locals
-      --cascade-dependencies                  When true, dependencies will cascade, meaning that a module will be declared to depend not only on its dependencies, but all dependencies of its dependencies all the way down. Default is true (default true)
-      --environment root                      Name of the environment folder within root directory. Default is ""
-  -h, --help                                  help for generate
-      --ignore-dependency-blocks dependency   When true, dependencies found in dependency blocks will be ignored
-      --input string                          Path of the file where Go Template configuration will be inputted. Default is .gitlab-ci.yml
-      --output string                         Path of the file where configuration will be generated. Default is not to write to file (default ".gitlab-ci.yml")
-      --parallel                              Enables plans and applies to happen in parallel. Default is enabled (default true)
-      --root string                           Path to the root directory of the git repo you want to build config for. Default is current dir (default "/home/msoutullo/projects/iv/terragrunt-gitlab-cicd-config")
-
-Global Flags:
+  -h, --help               help for terragrunt-gitlab-cicd-config
   -v, --verbosity string   Log level (debug, info, warn, error, fatal, panic (default "info")
+
+Use "terragrunt-gitlab-cicd-config [command] --help" for more information about a command.
 ```
 <!-- TOC -->
 
@@ -45,13 +43,17 @@ go get -u github.com/kitos9112/${APP}
 Or [download the binary](https://github.com/kitos9112/${APP}/releases/latest) from the releases page.
 
 ```bash
-# Linux
+# Linux x86_64
 curl -L https://github.com/kitos9112/${APP}/releases/download/${VERSION}/${APP}_${VERSION}_linux_x86_64.tar.gz | tar xz
+# Linux arm64
+curl -L https://github.com/kitos9112/${APP}/releases/download/${VERSION}/${APP}_${VERSION}_linux_arm64.tar.gz | tar xz
 
-# OS X
+# OS X x86_64
 curl -L https://github.com/kitos9112/${APP}/releases/download/${VERSION}/${APP}_${VERSION}_osx_x86_64.tar.gz | tar xz
+# OS X arm64
+curl -L https://github.com/kitos9112/${APP}/releases/download/${VERSION}/${APP}_${VERSION}_osx_arm64.tar.gz | tar xz
 
-# Windows
+# Windows x86_64
 curl -LO https://github.com/kitos9112/${APP}/releases/download/${VERSION}/${APP}_${VERSION}_windows_x86_64.zip
 unzip ${APP}_${VERSION}_windows_x86_64.zip
 ```
