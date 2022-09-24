@@ -25,7 +25,7 @@ release: README.md zip
 README.md:
 	VERSION="$(VERSION)" APP="$(APP)" USAGE="$$(go get github.com/kitos9112/$(APP); $(APP) -h 2>&1)" <README.template.md envsubst > README.md
 
-zip: release/$(APP)_$(VERSION)_osx_x86_64.tar.gz release/$(APP)_$(VERSION)_windows_x86_64.zip release/$(APP)_$(VERSION)_linux_x86_64.tar.gz release/$(APP)_$(VERSION)_linux_arm64.tar.gz
+zip: release/$(APP)_$(VERSION)_osx_x86_64.tar.gz release/$(APP)_$(VERSION)_windows_x86_64.zip release/$(APP)_$(VERSION)_linux_x86_64.tar.gz release/$(APP)_$(VERSION)_linux_arm64.tar.gz release/$(APP)_$(VERSION)_osx_arm64.tar.gz
 
 binaries: binaries/osx_x86_64/$(APP) binaries/osx_arm64/$(APP) binaries/windows_x86_64/$(APP).exe binaries/linux_x86_64/$(APP)
 
