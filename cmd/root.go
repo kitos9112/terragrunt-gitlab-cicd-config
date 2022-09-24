@@ -13,9 +13,9 @@ var (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "terragrunt-atlantis-config",
-	Short: "Generates Atlantis Config for Terragrunt projects",
-	Long:  "Generates Atlantis Config for Terragrunt projects",
+	Use:   "terragrunt-gitlab-cicd-config",
+	Short: "Generates GitlabCI Config for Terragrunt projects",
+	Long:  "Generates GitlabCI Config for Terragrunt projects",
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
