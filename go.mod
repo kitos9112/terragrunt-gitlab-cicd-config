@@ -7,7 +7,7 @@ require (
 	github.com/gruntwork-io/terragrunt v0.39.2
 	github.com/hashicorp/hcl/v2 v2.14.1
 	github.com/sirupsen/logrus v1.9.0
-	github.com/spf13/cobra v1.5.0
+	github.com/spf13/cobra v1.6.0
 	github.com/zclconf/go-cty v1.11.1
 	golang.org/x/sync v0.0.0-20220929204114-8fcdb60fdcc0
 )
@@ -70,7 +70,7 @@ require (
 	github.com/howeyc/gopass v0.0.0-20190910152052-7cb4b85ec19c // indirect
 	github.com/huandu/xstrings v1.3.2 // indirect
 	github.com/imdario/mergo v0.3.11 // indirect
-	github.com/inconshreveable/mousetrap v1.0.0 // indirect
+	github.com/inconshreveable/mousetrap v1.0.1 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/klauspost/compress v1.13.4 // indirect
 	github.com/lib/pq v1.8.0 // indirect
@@ -114,5 +114,5 @@ require (
 	gopkg.in/ini.v1 v1.44.0 // indirect
 	gopkg.in/square/go-jose.v2 v2.5.1 // indirect
 	gopkg.in/urfave/cli.v1 v1.20.0 // indirect
-	gopkg.in/yaml.v3 v3.0.0-20210107172259-749611fa9fcc // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
