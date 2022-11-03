@@ -7,7 +7,7 @@ require (
 	github.com/gruntwork-io/terragrunt v0.39.2
 	github.com/hashicorp/hcl/v2 v2.14.1
 	github.com/sirupsen/logrus v1.9.0
-	github.com/spf13/cobra v1.6.0
+	github.com/spf13/cobra v1.6.1
 	github.com/zclconf/go-cty v1.11.1
 	golang.org/x/sync v0.1.0
 )
