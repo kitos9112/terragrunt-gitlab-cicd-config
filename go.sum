@@ -388,6 +388,8 @@ github.com/gruntwork-io/terragrunt v0.39.1 h1:lgMnLpxHPRHTHFdV2/c5Vfs3J9Cvi+F5Y2
 github.com/gruntwork-io/terragrunt v0.39.1/go.mod h1:NxlmjFJe9OCp4Af7gqtQ41oRxHmjgBmC6sFHcjcfEXc=
 github.com/gruntwork-io/terragrunt v0.39.2 h1:obwJ1x5YBmEetPgT+z7H3O7LDuAYxwY9W1/wOTvGmLw=
 github.com/gruntwork-io/terragrunt v0.39.2/go.mod h1:NxlmjFJe9OCp4Af7gqtQ41oRxHmjgBmC6sFHcjcfEXc=
+github.com/gruntwork-io/terragrunt v0.40.1 h1:JTZZQlNELEl1ia43p1QFIN2sV1tqbCoz22q5htfcvQA=
+github.com/gruntwork-io/terragrunt v0.40.1/go.mod h1:NxlmjFJe9OCp4Af7gqtQ41oRxHmjgBmC6sFHcjcfEXc=
 github.com/gruntwork-io/terratest v0.32.6 h1:OEA11ZqEwKRowEdxusDnAPnMUN0w/jzeNcziuQsqkYk=
 github.com/hashicorp/aws-sdk-go-base v0.6.0/go.mod h1:2fRjWDv3jJBeN6mVWFHV6hFTNeFBx2gpDLQaZNxUVAY=
 github.com/hashicorp/consul v0.0.0-20171026175957-610f3c86a089/go.mod h1:mFrjN1mfidgJfYP1xrJCF+AfRhr6Eaqhb2+sfyn/OOI=
