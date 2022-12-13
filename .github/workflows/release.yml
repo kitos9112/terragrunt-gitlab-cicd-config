@@ -39,7 +39,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            kitos9112/terragrunt-gitlab-cicd-config:latest
-            kitos9112/terragrunt-gitlab-cicd-config:${{ env.TAG }}
-            ghcr.io/kitos9112/terragrunt-gitlab-cicd-config:latest
-            ghcr.io/kitos9112/terragrunt-gitlab-cicd-config:${{ env.TAG }}
+            kitos9112/terragrunt-gitlabci-config:latest
+            kitos9112/terragrunt-gitlabci-config:${{ env.TAG }}
+            ghcr.io/kitos9112/terragrunt-gitlabci-config:latest
+            ghcr.io/kitos9112/terragrunt-gitlabci-config:${{ env.TAG }}

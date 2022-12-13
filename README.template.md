@@ -1,27 +1,27 @@
 # ${APP}
 
-Heavily inspired on [Terragrunt Atlantis Configuration](https://github.com/transcend-io/terragrunt-atlantis-config) - This will read a [Terragrunt-like directory layout](https://github.com/gruntwork-io/terragrunt-infrastructure-live-example), interpret all `local` Terragrunt config blocks while parsing an input TXT Golang template mimicking a `.gitlab-ci.yml` file.
+Heavily inspired on [Terragrunt Atlantis Configuration](https://github.com/transcend-io/terragrunt-atlantis-config) - This will read a [Terragrunt-like directory layout](https://github.com/gruntwork-io/terragrunt-infrastructure-live-example), interpret all `local` Terragrunt config blocks while parsing an input TXT Golang template that should effectively mimic a `.gitlab-ci.yml` file.
 
 > The actual input file should be a valid `.gitlab-ci.yml` file with Golang. An example can be found [here](test/inputs/.gitlab-ci.yml.tpl)
 
 ```bash
-> terragrunt-gitlab-cicd-config --help
+> terragrunt-gitlabci-config --help
 By taking a Golang TXT template file, it generates GitlabCI Config for Terragrunt IaC live style projects maintained in a mono-repo fashion.
 
 Usage:
-  terragrunt-gitlab-cicd-config [command]
+  terragrunt-gitlabci-config [command]
 
 Available Commands:
   completion  Generate the autocompletion script for the specified shell
   generate    Creates GitLab CICD Dynamic configuration
   help        Help about any command
-  version     Version of terragrunt-gitlab-cicd-config
+  version     Version of terragrunt-gitlabci-config
 
 Flags:
-  -h, --help               help for terragrunt-gitlab-cicd-config
+  -h, --help               help for terragrunt-gitlabci-config
   -v, --verbosity string   Log level (debug, info, warn, error, fatal, panic (default "info")
 
-Use "terragrunt-gitlab-cicd-config [command] --help" for more information about a command.
+Use "terragrunt-gitlabci-config [command] --help" for more information about a command.
 ```
 <!-- TOC -->
 

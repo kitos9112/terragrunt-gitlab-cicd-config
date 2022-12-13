@@ -19,7 +19,7 @@ terraform {
 
     # Small note: get_env can't really be supported very well here.
     # In a case like this, I'd use a for loop to construct
-    # `extra_atlantis_dependencies` in locals for all possible regions
+    # `extra_gitlabci_dependencies` in locals for all possible regions
     optional_var_files = [
       "${get_parent_terragrunt_dir()}/${get_env("TF_VAR_env", "dev")}.tfvars",
       "${get_parent_terragrunt_dir()}/${get_env("TF_VAR_region", "us-east-1")}.tfvars",

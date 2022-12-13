@@ -7,7 +7,7 @@ terraform {
 }
 
 locals {
-  atlantis_skip = false
+  gitlabci_skip = false
 }
 
 inputs = {

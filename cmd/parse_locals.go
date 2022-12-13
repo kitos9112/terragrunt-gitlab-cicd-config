@@ -5,6 +5,7 @@ package cmd
 // parses the `locals` blocks and evaluates their contents.
 
 import (
+	"github.com/gruntwork-io/go-commons/errors"
 	"github.com/gruntwork-io/terragrunt/config"
 	"github.com/gruntwork-io/terragrunt/options"
 	"github.com/gruntwork-io/terragrunt/util"
@@ -18,7 +19,7 @@ import (
 // ResolvedLocals are the parsed result of local values this module cares about
 type ResolvedLocals struct {
 	// Extra dependencies that can be hardcoded in config
-	ExtraAtlantisDependencies []string
+	ExtraGitlabCiDependencies []string
 
 	// If set to true, the module will not be included in the output
 	Skip *bool
@@ -26,6 +27,14 @@ type ResolvedLocals struct {
 
 // parseHcl uses the HCL2 parser to parse the given string into an HCL file body.
 func parseHcl(parser *hclparse.Parser, hcl string, filename string) (file *hcl.File, err error) {
+	// The HCL2 parser and especially cty conversions will panic in many types of errors, so we have to recover from
+	// those panics here and convert them to normal errors
+	defer func() {
+		if recovered := recover(); recovered != nil {
+			err = errors.WithStackTrace(config.PanicWhileParsingConfig{RecoveredValue: recovered, ConfigFile: filename})
+		}
+	}()
+
 	if filepath.Ext(filename) == ".json" {
 		file, parseDiagnostics := parser.ParseJSON([]byte(hcl), filename)
 		if parseDiagnostics != nil && parseDiagnostics.HasErrors() {
@@ -50,7 +59,7 @@ func mergeResolvedLocals(parent ResolvedLocals, child ResolvedLocals) ResolvedLo
 		parent.Skip = child.Skip
 	}
 
-	parent.ExtraAtlantisDependencies = append(parent.ExtraAtlantisDependencies, child.ExtraAtlantisDependencies...)
+	parent.ExtraGitlabCiDependencies = append(parent.ExtraGitlabCiDependencies, child.ExtraGitlabCiDependencies...)
 
 	return parent
 }
@@ -70,8 +79,7 @@ func parseLocals(path string, terragruntOptions *options.TerragruntOptions, incl
 	}
 
 	// Decode just the Base blocks. See the function docs for DecodeBaseBlocks for more info on what base blocks are.
-	decodeSectionTypes := []config.PartialDecodeSectionType{}
-	localsAsCty, trackInclude, err := config.DecodeBaseBlocks(terragruntOptions, parser, file, path, includeFromChild, decodeSectionTypes)
+	localsAsCty, trackInclude, err := config.DecodeBaseBlocks(terragruntOptions, parser, file, path, includeFromChild, nil)
 	if err != nil {
 		return ResolvedLocals{}, err
 	}
@@ -98,19 +106,24 @@ func resolveLocals(localsAsCty cty.Value) ResolvedLocals {
 	}
 	rawLocals := localsAsCty.AsValueMap()
 
+	// If the `gitlab_cicd_skip` or `gitlab_ci_skip` local is set to true, we should skip this module.
 	skipValue, ok := rawLocals["gitlab_cicd_skip"]
+	// If both `gitlab_cicd_skip` and `gitlab_ci_skip` are set, the latter takes precedence
+	// skipValue, ok2 := rawLocals["gitlab_ci_skip"]
 	if ok {
 		hasValue := skipValue.True()
 		resolved.Skip = &hasValue
 	}
 
 	extraDependenciesAsCty, ok := rawLocals["extra_atlantis_dependencies"]
+	// If both `extra_atlantis_dependencies` and `extra_gitlabci_dependencies` are set, the latter takes precedence
+	// extraDependenciesAsCty, ok2 = rawLocals["extra_gitlabci_dependencies"]
 	if ok {
 		it := extraDependenciesAsCty.ElementIterator()
 		for it.Next() {
 			_, val := it.Element()
-			resolved.ExtraAtlantisDependencies = append(
-				resolved.ExtraAtlantisDependencies,
+			resolved.ExtraGitlabCiDependencies = append(
+				resolved.ExtraGitlabCiDependencies,
 				filepath.ToSlash(val.AsString()),
 			)
 		}

@@ -1,5 +1,5 @@
 locals {
-  extra_atlantis_dependencies = [
+  extra_gitlabci_dependencies = [
     # A relative file to the child should work
     "some_parent_dep",
 
