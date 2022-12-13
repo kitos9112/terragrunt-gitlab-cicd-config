@@ -5,23 +5,23 @@ Heavily inspired on [Terragrunt Atlantis Configuration](https://github.com/trans
 > The actual input file should be a valid `.gitlab-ci.yml` file with Golang. An example can be found [here](test/inputs/.gitlab-ci.yml.tpl)
 
 ```bash
-> terragrunt-gitlabci-config --help
+> terragrunt-gitlab-cicd-config --help
 By taking a Golang TXT template file, it generates GitlabCI Config for Terragrunt IaC live style projects maintained in a mono-repo fashion.
 
 Usage:
-  terragrunt-gitlabci-config [command]
+  terragrunt-gitlab-cicd-config [command]
 
 Available Commands:
   completion  Generate the autocompletion script for the specified shell
   generate    Creates GitLab CICD Dynamic configuration
   help        Help about any command
-  version     Version of terragrunt-gitlabci-config
+  version     Version of terragrunt-gitlab-cicd-config
 
 Flags:
-  -h, --help               help for terragrunt-gitlabci-config
+  -h, --help               help for terragrunt-gitlab-cicd-config
   -v, --verbosity string   Log level (debug, info, warn, error, fatal, panic (default "info")
 
-Use "terragrunt-gitlabci-config [command] --help" for more information about a command.
+Use "terragrunt-gitlab-cicd-config [command] --help" for more information about a command.
 ```
 <!-- TOC -->
 

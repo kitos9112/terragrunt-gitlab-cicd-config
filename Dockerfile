@@ -15,5 +15,5 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build
 
 # create super thin container with the binary only
 FROM scratch
-COPY --from=build /app/terragrunt-gitlabci-config /app/terragrunt-gitlabci-config
-ENTRYPOINT [ "/app/terragrunt-gitlabci-config" ]
+COPY --from=build /app/terragrunt-gitlab-cicd-config /app/terragrunt-gitlab-cicd-config
+ENTRYPOINT [ "/app/terragrunt-gitlab-cicd-config" ]

@@ -13,7 +13,7 @@ var (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "terragrunt-gitlabci-config",
+	Use:   "terragrunt-gitlab-cicd-config",
 	Short: "Generates GitlabCI Config for Terragrunt projects",
 	Long:  "Generates GitlabCI Config for Terragrunt projects",
 }

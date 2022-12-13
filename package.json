@@ -1,4 +1,4 @@
 {
-  "name": "terragrunt-gitlabci-config",
+  "name": "terragrunt-gitlab-cicd-config",
   "version": "1.4.0"
 }
