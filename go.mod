@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/Masterminds/sprig/v3 v3.2.3
-	github.com/gruntwork-io/terragrunt v0.42.4
+	github.com/gruntwork-io/terragrunt v0.42.5
 	github.com/hashicorp/hcl/v2 v2.15.0
 	github.com/sirupsen/logrus v1.9.0
 	github.com/spf13/cobra v1.6.1
