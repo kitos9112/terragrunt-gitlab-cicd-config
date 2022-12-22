@@ -528,17 +528,21 @@ func main(cmd *cobra.Command, args []string) error {
 		Workload string
 	}
 	environmentMap := make(map[string]string)
-
+	// Pre-populate the map with the environments we want to support as per Gitlab deployment tiers
+	// https://docs.gitlab.com/ee/ci/environments/#deployment-tier-of-environments
 	environmentMap["development"] = "dev"
 	environmentMap["staging"] = "stg"
-	environmentMap["non-production"] = "nonprod"
 	environmentMap["production"] = "prod"
+
 	varsTemplate := vars{Needs: parallel, Dirs: strSlice}
-	if environment != "" {
-		varsTemplate.Workload = environmentMap[environment]
-	} else {
+	if environment == "" {
 		varsTemplate.Workload = ""
+	} else if _, ok := environmentMap[environment]; !ok && preserveEnvironment {
+		varsTemplate.Workload = environment
+	} else {
+		varsTemplate.Workload = environmentMap[environment]
 	}
+
 	outputPath, err := os.Create(outputPath)
 	if err != nil {
 		log.Error("create file: ", err)
@@ -555,6 +559,7 @@ func main(cmd *cobra.Command, args []string) error {
 var gitRoot string
 var verbosity string
 var environment string
+var preserveEnvironment bool
 var ignoreDependencyBlocks bool
 var parallel bool
 var inputTemplate string
@@ -566,8 +571,8 @@ var defaultApplyRequirements []string
 // generateCmd represents the generate command
 var generateCmd = &cobra.Command{
 	Use:   "generate",
-	Short: "Creates GitLab CICD Dynamic configuration",
-	Long:  `Creates GitLab CICD Dynamic configuration to be run as part of an external trigger. Use carefully`,
+	Short: "Creates GitLabCI Dynamic configuration",
+	Long:  `Creates GitLabCI Dynamic configuration to be run as part of an external trigger. Use carefully`,
 	RunE:  main,
 }
 
@@ -592,7 +597,8 @@ func init() {
 	generateCmd.PersistentFlags().BoolVar(&ignoreDependencyBlocks, "ignore-dependency-blocks", false, "When true, dependencies found in `dependency` blocks will be ignored")
 	generateCmd.PersistentFlags().BoolVar(&parallel, "parallel", true, "Enables plans and applies to happen in parallel. Default is enabled")
 	generateCmd.PersistentFlags().BoolVar(&cascadeDependencies, "cascade-dependencies", true, "When true, dependencies will cascade, meaning that a module will be declared to depend not only on its dependencies, but all dependencies of its dependencies all the way down. Default is true")
-	generateCmd.PersistentFlags().StringVar(&environment, "environment", "", "Name of the environment folder within `root` directory. Default is \"\"")
+	generateCmd.PersistentFlags().StringVar(&environment, "environment", "", "Name of the environment folder within `root` directory. It can be shorter if the value complies with Gitlab deployment tiers; `development`, `staging`, and `production`. Default is \"\"")
+	generateCmd.PersistentFlags().BoolVar(&preserveEnvironment, "preserve-environment", false, "When true, environment name will be preserved. Default is false")
 	generateCmd.PersistentFlags().StringSliceVar(&defaultApplyRequirements, "apply-requirements", []string{}, "Requirements that must be satisfied before `atlantis apply` can be run. Currently the only supported requirements are `approved` and `mergeable`. Can be overridden by locals")
 	generateCmd.PersistentFlags().StringVar(&inputTemplate, "input", "", "Path of the file where Go Template configuration will be inputted. Default is .gitlab-ci.yml")
 	generateCmd.PersistentFlags().StringVar(&outputPath, "output", ".gitlab-ci.yml", "Path of the file where configuration will be generated. Default is not to write to file")
