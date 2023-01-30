@@ -3,7 +3,7 @@ terraform {
 }
 
 locals {
-  extra_atlantis_dependencies = [
+  extra_gitlabci_dependencies = [
     "some_extra_dep",
     find_in_parent_folders("test_file.json")
   ]

@@ -7,7 +7,7 @@ terraform {
 }
 
 locals {
-  extra_atlantis_dependencies = [
+  extra_gitlabci_dependencies = [
     "some_child_dep",
   ]
 }

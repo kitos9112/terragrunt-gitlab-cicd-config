@@ -1,6 +1,6 @@
 # terragrunt-gitlab-cicd-config
 
-Heavily inspired on [Terragrunt Atlantis Configuration](https://github.com/transcend-io/terragrunt-atlantis-config) - This will read a [Terragrunt-like directory layout](https://github.com/gruntwork-io/terragrunt-infrastructure-live-example), interpret all `local` Terragrunt config blocks while parsing an input TXT Golang template mimicking a `.gitlab-ci.yml` file.
+Heavily inspired on [Terragrunt Atlantis Configuration](https://github.com/transcend-io/terragrunt-atlantis-config) - This will read a [Terragrunt-like directory layout](https://github.com/gruntwork-io/terragrunt-infrastructure-live-example), interpret all `local` Terragrunt config blocks while parsing an input TXT Golang template that should effectively mimic a `.gitlab-ci.yml` file.
 
 > The actual input file should be a valid `.gitlab-ci.yml` file with Golang. An example can be found [here](test/inputs/.gitlab-ci.yml.tpl)
 
@@ -44,18 +44,18 @@ Or [download the binary](https://github.com/kitos9112/terragrunt-gitlab-cicd-con
 
 ```bash
 # Linux x86_64
-curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/1.4.0/terragrunt-gitlab-cicd-config_1.4.0_linux_x86_64.tar.gz | tar xz
+curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/2.0.0-rc1/terragrunt-gitlab-cicd-config_2.0.0-rc1_linux_x86_64.tar.gz | tar xz
 # Linux arm64
-curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/1.4.0/terragrunt-gitlab-cicd-config_1.4.0_linux_arm64.tar.gz | tar xz
+curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/2.0.0-rc1/terragrunt-gitlab-cicd-config_2.0.0-rc1_linux_arm64.tar.gz | tar xz
 
 # OS X x86_64
-curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/1.4.0/terragrunt-gitlab-cicd-config_1.4.0_osx_x86_64.tar.gz | tar xz
+curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/2.0.0-rc1/terragrunt-gitlab-cicd-config_2.0.0-rc1_osx_x86_64.tar.gz | tar xz
 # OS X arm64
-curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/1.4.0/terragrunt-gitlab-cicd-config_1.4.0_osx_arm64.tar.gz | tar xz
+curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/2.0.0-rc1/terragrunt-gitlab-cicd-config_2.0.0-rc1_osx_arm64.tar.gz | tar xz
 
 # Windows x86_64
-curl -LO https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/1.4.0/terragrunt-gitlab-cicd-config_1.4.0_windows_x86_64.zip
-unzip terragrunt-gitlab-cicd-config_1.4.0_windows_x86_64.zip
+curl -LO https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/2.0.0-rc1/terragrunt-gitlab-cicd-config_2.0.0-rc1_windows_x86_64.zip
+unzip terragrunt-gitlab-cicd-config_2.0.0-rc1_windows_x86_64.zip
 ```
 
 ## Use it
