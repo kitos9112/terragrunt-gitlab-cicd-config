@@ -5,7 +5,7 @@ go 1.19
 require (
 	github.com/Masterminds/sprig/v3 v3.2.3
 	github.com/gruntwork-io/go-commons v0.14.0
-	github.com/gruntwork-io/terragrunt v0.43.0
+	github.com/gruntwork-io/terragrunt v0.43.2
 	github.com/hashicorp/go-getter v1.6.2
 	github.com/hashicorp/go-getter/v2 v2.1.1
 	github.com/hashicorp/hcl/v2 v2.16.0
