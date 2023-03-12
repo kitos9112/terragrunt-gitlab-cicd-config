@@ -5,7 +5,7 @@ go 1.19
 require (
 	github.com/Masterminds/sprig/v3 v3.2.3
 	github.com/gruntwork-io/go-commons v0.14.0
-	github.com/gruntwork-io/terragrunt v0.44.0
+	github.com/gruntwork-io/terragrunt v0.44.5
 	github.com/hashicorp/go-getter v1.7.0
 	github.com/hashicorp/hcl/v2 v2.16.1
 	github.com/hashicorp/terraform-config-inspect v0.0.0-20230223165911-2d94e3d51111
