@@ -483,7 +483,10 @@ func main(cmd *cobra.Command, args []string) error {
 					defer sem.Release(1)
 
 					// check the terragrunt path contains the environment variable value
-					if !strings.Contains(terragruntPath, environment) {
+					exactEnvironment := fmt.Sprint("/(", environment, ")/")
+					exactEnvironmentRegexp := regexp.MustCompile(exactEnvironment)
+					environmentDoesNotMatchPath := !exactEnvironmentRegexp.Match([]byte(terragruntPath))
+					if environmentDoesNotMatchPath {
 						return nil
 					}
 
