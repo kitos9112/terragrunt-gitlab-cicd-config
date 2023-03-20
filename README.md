@@ -37,24 +37,24 @@ Use "terragrunt-gitlab-cicd-config [command] --help" for more information about 
 Using go get:
 
 ```bash
-go get -u github.com/kitos9112/terragrunt-gitlab-cicd-config
+go get -u github.com/jose9781/terragrunt-gitlab-cicd-config
 ```
 
-Or [download the binary](https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/latest) from the releases page.
+Or [download the binary](https://github.com/jose9781/terragrunt-gitlab-cicd-config/releases/latest) from the releases page.
 
 ```bash
 # Linux x86_64
-curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/2.0.1/terragrunt-gitlab-cicd-config_2.0.1_linux_x86_64.tar.gz | tar xz
+curl -L https://github.com/jose9781/terragrunt-gitlab-cicd-config/releases/download/2.0.1/terragrunt-gitlab-cicd-config_2.0.1_linux_x86_64.tar.gz | tar xz
 # Linux arm64
-curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/2.0.1/terragrunt-gitlab-cicd-config_2.0.1_linux_arm64.tar.gz | tar xz
+curl -L https://github.com/jose9781/terragrunt-gitlab-cicd-config/releases/download/2.0.1/terragrunt-gitlab-cicd-config_2.0.1_linux_arm64.tar.gz | tar xz
 
 # OS X x86_64
-curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/2.0.1/terragrunt-gitlab-cicd-config_2.0.1_osx_x86_64.tar.gz | tar xz
+curl -L https://github.com/jose9781/terragrunt-gitlab-cicd-config/releases/download/2.0.1/terragrunt-gitlab-cicd-config_2.0.1_osx_x86_64.tar.gz | tar xz
 # OS X arm64
-curl -L https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/2.0.1/terragrunt-gitlab-cicd-config_2.0.1_osx_arm64.tar.gz | tar xz
+curl -L https://github.com/jose9781/terragrunt-gitlab-cicd-config/releases/download/2.0.1/terragrunt-gitlab-cicd-config_2.0.1_osx_arm64.tar.gz | tar xz
 
 # Windows x86_64
-curl -LO https://github.com/kitos9112/terragrunt-gitlab-cicd-config/releases/download/2.0.1/terragrunt-gitlab-cicd-config_2.0.1_windows_x86_64.zip
+curl -LO https://github.com/jose9781/terragrunt-gitlab-cicd-config/releases/download/2.0.1/terragrunt-gitlab-cicd-config_2.0.1_windows_x86_64.zip
 unzip terragrunt-gitlab-cicd-config_2.0.1_windows_x86_64.zip
 ```
 
