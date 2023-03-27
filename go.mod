@@ -6,10 +6,9 @@ require (
 	github.com/Masterminds/sprig/v3 v3.2.3
 	github.com/gruntwork-io/go-commons v0.15.0
 	github.com/gruntwork-io/terragrunt v0.45.0
-	github.com/hashicorp/go-getter v1.7.0
-	github.com/hashicorp/go-getter/v2 v2.2.1
+	github.com/hashicorp/go-getter v1.7.1
 	github.com/hashicorp/hcl/v2 v2.16.2
-	github.com/hashicorp/terraform-config-inspect 71b695beb305
+	github.com/hashicorp/terraform-config-inspect v0.0.0-20230324223604-71b695beb305
 	github.com/sirupsen/logrus v1.9.0
 	github.com/spf13/cobra v1.6.1
 	github.com/zclconf/go-cty v1.13.1
@@ -118,9 +117,7 @@ require (
 	github.com/ulikunitz/xz v0.5.10 // indirect
 	github.com/urfave/cli v1.22.4 // indirect
 	github.com/urfave/cli/v2 v2.10.3 // indirect
-	github.com/vmihailenco/msgpack/v4 v4.3.12 // indirect
 	github.com/vmihailenco/msgpack/v5 v5.3.5 // indirect
-	github.com/vmihailenco/tagparser v0.1.1 // indirect
 	github.com/vmihailenco/tagparser/v2 v2.0.0 // indirect
 	github.com/xrash/smetrics v0.0.0-20201216005158-039620a65673 // indirect
 	github.com/zclconf/go-cty-yaml v1.0.3 // indirect
