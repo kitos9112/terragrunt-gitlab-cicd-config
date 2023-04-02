@@ -551,6 +551,8 @@ github.com/grpc-ecosystem/grpc-gateway v1.8.5/go.mod h1:vNeuVxBJEsws4ogUvrchl83t
 github.com/grpc-ecosystem/grpc-gateway v1.16.0/go.mod h1:BDjrQk3hbvj6Nolgz8mAMFbcEtjT1g+wF4CSlocrBnw=
 github.com/gruntwork-io/go-commons v0.15.0 h1:fB7T4wO/JWQEGBnpVg4PfrNYnNtqRSUHJgf2pTaVe/0=
 github.com/gruntwork-io/go-commons v0.15.0/go.mod h1:AlYVzB6p6d8IYakGPNq/pspRjI7da7FeAIffISO9878=
+github.com/gruntwork-io/go-commons v0.16.1 h1:EhrTKRg5XK/wDL/s99zisjL9+zhTaEcepEkJeyvj3s8=
+github.com/gruntwork-io/go-commons v0.16.1/go.mod h1:/nnLMhO4HpItt43K+8ACM66g67iMy3oo2nnwq59n3wg=
 github.com/gruntwork-io/terragrunt v0.45.0 h1:1uSLVBzJCkG4HawhBCy9je6HmsOF0kmiMRwmnuIze60=
 github.com/gruntwork-io/terragrunt v0.45.0/go.mod h1:ri1x811Tra+/hzNUioFOD2rFJzuU5j7uVX8CRVUGQh8=
 github.com/gruntwork-io/terratest v0.41.0 h1:QKFK6m0EMVnrV7lw2L06TlG+Ha3t0CcOXuBVywpeNRU=
