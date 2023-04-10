@@ -555,6 +555,8 @@ github.com/gruntwork-io/go-commons v0.16.1 h1:EhrTKRg5XK/wDL/s99zisjL9+zhTaEcepE
 github.com/gruntwork-io/go-commons v0.16.1/go.mod h1:/nnLMhO4HpItt43K+8ACM66g67iMy3oo2nnwq59n3wg=
 github.com/gruntwork-io/terragrunt v0.45.0 h1:1uSLVBzJCkG4HawhBCy9je6HmsOF0kmiMRwmnuIze60=
 github.com/gruntwork-io/terragrunt v0.45.0/go.mod h1:ri1x811Tra+/hzNUioFOD2rFJzuU5j7uVX8CRVUGQh8=
+github.com/gruntwork-io/terragrunt v0.45.2 h1:A6lSyMvBmm4RB0AiPG7Cp2JvLkrD8Ctx8D8f0kgLFrI=
+github.com/gruntwork-io/terragrunt v0.45.2/go.mod h1:ri1x811Tra+/hzNUioFOD2rFJzuU5j7uVX8CRVUGQh8=
 github.com/gruntwork-io/terratest v0.41.0 h1:QKFK6m0EMVnrV7lw2L06TlG+Ha3t0CcOXuBVywpeNRU=
 github.com/hashicorp/aws-sdk-go-base v0.6.0/go.mod h1:2fRjWDv3jJBeN6mVWFHV6hFTNeFBx2gpDLQaZNxUVAY=
 github.com/hashicorp/consul v0.0.0-20171026175957-610f3c86a089/go.mod h1:mFrjN1mfidgJfYP1xrJCF+AfRhr6Eaqhb2+sfyn/OOI=
