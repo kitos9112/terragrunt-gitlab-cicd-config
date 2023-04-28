@@ -5,7 +5,7 @@ go 1.19
 require (
 	github.com/Masterminds/sprig/v3 v3.2.3
 	github.com/gruntwork-io/go-commons v0.16.1
-	github.com/gruntwork-io/terragrunt v0.45.4
+	github.com/gruntwork-io/terragrunt v0.45.5
 	github.com/hashicorp/go-getter v1.7.1
 	github.com/hashicorp/hcl/v2 v2.16.2
 	github.com/hashicorp/terraform-config-inspect v0.0.0-20230413234026-f1617e8a5fcc
@@ -59,6 +59,7 @@ require (
 	github.com/googleapis/enterprise-certificate-proxy v0.2.0 // indirect
 	github.com/googleapis/gax-go/v2 v2.6.0 // indirect
 	github.com/goware/prefixer v0.0.0-20160118172347-395022866408 // indirect
+	github.com/gruntwork-io/gruntwork-cli v0.7.0 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/hashicorp/go-cleanhttp v0.5.2 // indirect
 	github.com/hashicorp/go-hclog v1.4.0 // indirect
