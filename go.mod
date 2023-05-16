@@ -9,7 +9,7 @@ require (
 	github.com/hashicorp/go-getter v1.7.1
 	github.com/hashicorp/hcl/v2 v2.16.2
 	github.com/hashicorp/terraform-config-inspect v0.0.0-20230413234026-f1617e8a5fcc
-	github.com/sirupsen/logrus v1.9.0
+	github.com/sirupsen/logrus v1.9.1
 	github.com/spf13/cobra v1.7.0
 	github.com/zclconf/go-cty v1.13.1
 	golang.org/x/sync v0.1.0
