@@ -396,12 +396,30 @@ func createProject(sourcePath string) (*DependencyDirs, error) {
 		relativeDependencies = append(relativeDependencies, strings.Split(absolutePath, gitRoot)[1])
 	}
 
+	// Make the relativeDependencies unique
+	relativeDependencies = getUniqueItems(relativeDependencies)	
+
 	project := &DependencyDirs{
 		SourcePath:   relativeSourceDir,
 		Dependencies: relativeDependencies,
 	}
 
 	return project, nil
+}
+
+func getUniqueItems(input []string) []string {
+	uniqueItems := make(map[string]bool)
+
+	for _, item := range input {
+		uniqueItems[item] = true
+	}
+
+	uniqueSlice := make([]string, 0, len(uniqueItems))
+	for item := range uniqueItems {
+		uniqueSlice = append(uniqueSlice, item)
+	}
+
+	return uniqueSlice
 }
 
 // Finds the absolute paths of all terragrunt.hcl files
