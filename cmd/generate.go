@@ -482,12 +482,15 @@ func main(cmd *cobra.Command, args []string) error {
 				errGroup.Go(func() error {
 					defer sem.Release(1)
 
-					// check the terragrunt path contains the environment variable value
-					exactEnvironment := fmt.Sprint("/(", environment, ")/")
-					exactEnvironmentRegexp := regexp.MustCompile(exactEnvironment)
-					environmentDoesNotMatchPath := !exactEnvironmentRegexp.Match([]byte(terragruntPath))
-					if environmentDoesNotMatchPath {
-						return nil
+					// only run this check if the environment is given, else generate it for all
+					if environment != "" {
+						// check the terragrunt path contains the environment variable value
+						exactEnvironment := fmt.Sprint("/(", environment, ")/")
+						exactEnvironmentRegexp := regexp.MustCompile(exactEnvironment)
+						environmentDoesNotMatchPath := !exactEnvironmentRegexp.Match([]byte(terragruntPath))
+						if environmentDoesNotMatchPath {
+							return nil
+						}
 					}
 
 					project, err := createProject(terragruntPath)
