@@ -403,16 +403,33 @@ func createProject(sourcePath string) (*DependencyDirs, error) {
 		relativeDependencies = append(relativeDependencies, strings.Split(absolutePath, gitRoot)[1])
 	}
 
+	// Make the relativeDependencies unique
+	relativeDependencies = getUniqueItems(relativeDependencies)
 	// Group by environment
-	relativeDependenciesGrouped := groupByEnvironment(relativeDependencies)	
+	relativeDependenciesGrouped := groupByEnvironment(relativeDependencies)
 
 	project := &DependencyDirs{
-		SourcePath:   relativeSourceDir,
-		Dependencies: relativeDependencies,
+		SourcePath:          relativeSourceDir,
+		Dependencies:        relativeDependencies,
 		DependenciesGrouped: relativeDependenciesGrouped,
 	}
 
 	return project, nil
+}
+
+func getUniqueItems(input []string) []string {
+	uniqueItems := make(map[string]bool)
+
+	for _, item := range input {
+		uniqueItems[item] = true
+	}
+
+	uniqueSlice := make([]string, 0, len(uniqueItems))
+	for item := range uniqueItems {
+		uniqueSlice = append(uniqueSlice, item)
+	}
+
+	return uniqueSlice
 }
 
 func groupByEnvironment(list []string) []EnvironmentGroup {
