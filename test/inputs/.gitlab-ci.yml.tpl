@@ -52,4 +52,12 @@ Apply {{ .SourcePath }}:
         {{- range .Dependencies }}
         - {{ . -}}
         {{ end }}
+    {{/* In case you exceed the 50 dependencies, you can group them by directory */}}        
+    {{/* {{- range .DependenciesGrouped }}
+    - when: manual
+      changes:
+      {{- range .Items }}
+        - {{ . }}
+      {{- end }}
+    {{ end }}    
 {{ end }}

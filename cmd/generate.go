@@ -72,6 +72,8 @@ type DependencyDirs struct {
 	SourcePath string
 	// List of releative path dependencies
 	Dependencies []string
+	// Dependencies grouped by directory (environment)
+	DependenciesGrouped []EnvironmentGroup
 }
 
 // Set up a cache for the getDependencies function
@@ -83,6 +85,11 @@ type getDependenciesOutput struct {
 type GetDependenciesCache struct {
 	mtx  sync.RWMutex
 	data map[string]getDependenciesOutput
+}
+
+type EnvironmentGroup struct {
+	Environment string
+	Items       []string
 }
 
 func newGetDependenciesCache() *GetDependenciesCache {
@@ -397,11 +404,14 @@ func createProject(sourcePath string) (*DependencyDirs, error) {
 	}
 
 	// Make the relativeDependencies unique
-	relativeDependencies = getUniqueItems(relativeDependencies)	
+	relativeDependencies = getUniqueItems(relativeDependencies)
+	// Group by environment
+	relativeDependenciesGrouped := groupByEnvironment(relativeDependencies)
 
 	project := &DependencyDirs{
-		SourcePath:   relativeSourceDir,
-		Dependencies: relativeDependencies,
+		SourcePath:          relativeSourceDir,
+		Dependencies:        relativeDependencies,
+		DependenciesGrouped: relativeDependenciesGrouped,
 	}
 
 	return project, nil
@@ -420,6 +430,29 @@ func getUniqueItems(input []string) []string {
 	}
 
 	return uniqueSlice
+}
+
+func groupByEnvironment(list []string) []EnvironmentGroup {
+	groups := make(map[string][]string)
+
+	for _, item := range list {
+		parts := strings.SplitN(item, "/", 2)
+		environment := "root"
+		if len(parts) > 1 {
+			environment = parts[0]
+		}
+		groups[environment] = append(groups[environment], item)
+	}
+
+	var result []EnvironmentGroup
+	for environment, items := range groups {
+		result = append(result, EnvironmentGroup{
+			Environment: environment,
+			Items:       items,
+		})
+	}
+
+	return result
 }
 
 // Finds the absolute paths of all terragrunt.hcl files
