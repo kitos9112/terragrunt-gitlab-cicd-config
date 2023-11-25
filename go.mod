@@ -1,13 +1,12 @@
 module github.com/kitos9112/terragrunt-gitlab-cicd-config
 
-go 1.19
+go 1.21
 
 require (
 	github.com/Masterminds/sprig/v3 v3.2.3
 	github.com/gruntwork-io/go-commons v0.17.1
 	github.com/gruntwork-io/terragrunt v0.48.1
 	github.com/hashicorp/go-getter v1.7.0
-	github.com/hashicorp/go-getter/v2 v2.2.1
 	github.com/hashicorp/hcl/v2 v2.19.1
 	github.com/hashicorp/terraform-config-inspect v0.0.0-20230925220900-5a6f8d18746d
 	github.com/sirupsen/logrus v1.9.3
