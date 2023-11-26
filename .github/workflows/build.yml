@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: golang:1.20-alpine
+      image: golang:1.21-alpine
     steps:
       - name: Install pre-requisites (1)
         run: |
@@ -25,13 +25,3 @@ jobs:
 
       - name: Build
         run: make binaries
-
-      - name: Release
-        if: ${{ github.event_name != 'pull_request' }}
-        run: |
-          npm version patch
-          make release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN  }}
-          GIT_AUTHOR_EMAIL: "actions@users.noreply.github.com"
-          GIT_AUTHOR_NAME: "GitHub Actions"
