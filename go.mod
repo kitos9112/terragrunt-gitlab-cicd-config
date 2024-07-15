@@ -11,7 +11,7 @@ require (
 	github.com/hashicorp/terraform-config-inspect v0.0.0-20231204233900-a34142ec2a72
 	github.com/sirupsen/logrus v1.9.3
 	github.com/spf13/cobra v1.8.0
-	github.com/zclconf/go-cty v1.14.1
+	github.com/zclconf/go-cty v1.15.0
 	golang.org/x/sync v0.5.0
 )
 
