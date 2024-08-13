@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: golang:1.21-alpine
+      image: golang:1.23-alpine
     steps:
       - name: Install pre-requisites (1)
         run: |
