@@ -7,7 +7,7 @@ require (
 	github.com/gruntwork-io/go-commons v0.17.1
 	github.com/gruntwork-io/terragrunt v0.48.1
 	github.com/hashicorp/go-getter v1.7.3
-	github.com/hashicorp/hcl/v2 v2.19.1
+	github.com/hashicorp/hcl/v2 v2.22.0
 	github.com/hashicorp/terraform-config-inspect v0.0.0-20231204233900-a34142ec2a72
 	github.com/sirupsen/logrus v1.9.3
 	github.com/spf13/cobra v1.8.0
@@ -139,12 +139,14 @@ require (
 	go.uber.org/atomic v1.9.0 // indirect
 	golang.org/x/crypto v0.17.0 // indirect
 	golang.org/x/exp v0.0.0-20230905200255-921286631fa9 // indirect
+	golang.org/x/mod v0.12.0 // indirect
 	golang.org/x/net v0.17.0 // indirect
 	golang.org/x/oauth2 v0.13.0 // indirect
 	golang.org/x/sys v0.15.0 // indirect
 	golang.org/x/term v0.15.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	golang.org/x/time v0.0.0-20220224211638-0e9765cccd65 // indirect
+	golang.org/x/tools v0.13.0 // indirect
 	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2 // indirect
 	google.golang.org/api v0.149.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
