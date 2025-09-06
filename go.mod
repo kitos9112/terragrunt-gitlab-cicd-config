@@ -1,6 +1,6 @@
 module github.com/kitos9112/terragrunt-gitlab-cicd-config
 
-go 1.21
+go 1.23
 
 require (
 	github.com/Masterminds/sprig/v3 v3.2.3
@@ -11,7 +11,7 @@ require (
 	github.com/hashicorp/terraform-config-inspect v0.0.0-20231204233900-a34142ec2a72
 	github.com/sirupsen/logrus v1.9.3
 	github.com/spf13/cobra v1.8.0
-	github.com/zclconf/go-cty v1.14.1
+	github.com/zclconf/go-cty v1.17.0
 	golang.org/x/sync v0.5.0
 )
 
