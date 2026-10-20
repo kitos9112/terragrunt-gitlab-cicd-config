@@ -1,6 +1,6 @@
 module github.com/kitos9112/terragrunt-gitlab-cicd-config
 
-go 1.21
+go 1.24
 
 require (
 	github.com/Masterminds/sprig/v3 v3.2.3
@@ -98,7 +98,7 @@ require (
 	github.com/jessevdk/go-flags v1.5.0 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/jstemmer/go-junit-report v1.0.0 // indirect
-	github.com/klauspost/compress v1.15.11 // indirect
+	github.com/klauspost/compress v1.18.7 // indirect
 	github.com/lib/pq v1.10.5 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.17 // indirect
